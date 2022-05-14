@@ -11,20 +11,20 @@ def app():
     results = ResultPickler()
     results.load_data(file_name='./data/engagement_results.pickle')
 
-    st.title("User Engagement analysis")
+    st.title("User Engagement Aalytics")
 
-    st.header("Top 10 Users")
+    st.header("Top Ten Users")
     st.subheader("Based on: Session Count")
     st.dataframe(results.data['session_frequency'])
 
-    st.subheader("Based on: Total Duration (hr)")
+    st.subheader("Based on: Total Duration (ms)")
     st.dataframe(results.data['session_duration'])
 
-    st.subheader("Based on: Total Data Traffic (MegaBytes)")
+    st.subheader("Based on: Total Data Traffic (Bytes)")
     st.dataframe(results.data['total_session_b'])
 
     st.header("Top 10 Users Engaged Per Each Application")
-    st.subheader("Social Media App")
+    st.subheader("Social Media Apps")
     st.dataframe(results.data['social_media_traffic'])
 
     st.subheader("Google")
@@ -48,5 +48,4 @@ def app():
     st.header("Top 3 Most Used Applications")
     st.dataframe(results.data['most_used_apps'])
 
-    st.header("Users Clustering")
-    st.image('./data/engagement_cluster.png')
+    
