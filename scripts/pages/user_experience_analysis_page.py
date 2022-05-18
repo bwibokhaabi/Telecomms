@@ -11,9 +11,9 @@ def app():
     results = ResultPickler()
     results.load_data(file_name='./data/experience_results.pickle')
 
-    st.title("User Experience analysis")
+    st.title("User Experience analytics")
 
-    st.header("Most Occuring Values of Metrics")
+    st.header("Metrics of key user experiece indicators")
     st.dataframe(results.data['most_occuring_values'])
 
     st.header("Minimum and Maximum Values of Metrics")
